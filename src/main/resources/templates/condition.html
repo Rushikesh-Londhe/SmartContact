@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>user is <span th:text="${isActive}?'ACTIVE':'NOT ACTIVE'"></span></h1>
+
+<div>
+	<h1 th:if="${gender}=='m'">male</h1>
+	<h1 th:unless="${gender}=='m'">female</h1>
+	
+	<div th:switch="${#lists.size(no)}">
+		<h1 th:case="'0'">list contain 0 element</h1>
+		<h1 th:case="'1'">list contain 1 element</h1>
+		<h1 th:case="*">list contain more than 1 element</h1>
+	</div>
+</div>
+</body>
+</html>

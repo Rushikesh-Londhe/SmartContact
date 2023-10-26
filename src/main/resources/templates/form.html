@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<meta charset="UTF-8" />
+	<title>Login here</title>
+</head>
+<body>
+	
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-md- offset-md-3">
+				
+				<form th:action="@{/process}" method="post" >
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"   ><br><br>
+        
+        <label for="checkbox">check condition</label>
+        <input type="checkbox" id="checkbox" name="agreed" value="yes"><br><br>
+        
+        <input type="submit" value="Submit">
+  
+    <p th:each"e :${#fields.error('username')}" th:text="${e}">
+		
+	</p>
+	  </form>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

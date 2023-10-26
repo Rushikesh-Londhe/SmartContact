@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>Home page</title>
+</head>
+<body>
+	<section>	
+		
+		
+		<div class="card-body" >
+		<div class="conatiner text-center" >
+		 	
+			<h3 ><span th:text="${contact.name}"></span> (<span  th:text="${contact.secondName}"></span>)</h3>
+		
+		<table class="table">
+  <tbody>
+    <tr>
+      <th scope="row">ID</th>
+      <td><span th:text="${contact.cid}"></span></td>
+    </tr>
+    <tr>
+      <th scope="row">Email</th>
+      <td><span th:text="${contact.email}"></span></td>
+    </tr>
+    <tr>
+      <th scope="row">Phone</th>
+      <td><span th:text="${contact.phone}"></span></td>
+    </tr>
+    <tr>
+      <th scope="row">Work</th>
+      <td><span th:text="${contact.work}"></span></td>
+    </tr>
+    <tr>
+      <th scope="row">Description</th>
+      <td><span th:text="${contact.description}"></span></td>
+    </tr>
+  </tbody>
+</table>
+
+    
+   
+		</div>	
+		</div>
+	</section>
+</body>
+</html>

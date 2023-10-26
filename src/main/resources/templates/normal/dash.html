@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>Home page</title>
+</head>
+<body>
+	<section>
+<div class="container">
+	<div class="card">
+		<div class="card-body">
+		
+		<div style="text-align: center;">
+    <img src="/img/space.jpeg" style="width: 100%; margin-left: 0%;" class="my_profile_picture" alt="profile" />
+<div style="position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); text-transform: uppercase; color: white; ">
+        Start adding your contacts with Smart Contact Manager
+    </div>
+	</div>
+</div>
+<hr />
+<!--payment-->
+<h3 class="my-3 text-center mt-4">Donate Us</h3>
+<input id="payment_field" type="text" class="form-control my-2" placeholder="Enter Amount Here" />
+<div class="conatainer text-center">
+	<button onclick="paymentStart();" class="btn btn-success btn-block">Pay</button>
+</div>
+
+<script>
+	$(document).ready(()=>{$(".item").removeClass("active");});
+</script>
+</section>
+</body>
+</html>

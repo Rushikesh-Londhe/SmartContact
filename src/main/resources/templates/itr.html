@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en" xmlns:th ="http://www.thymleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<h1 th:text="${names}"></h1>
+	<ul>
+		<li th:each="n ,status: ${names}">
+			
+			<span th:style="${status.odd }?'font-weight:bold':''"  th:text="${status.index}+''+${n}"></span>
+		</li>
+		
+	</ul>
+	
+</body> 
+</html>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>Contact page</title>
+</head>
+<body>
+	<section>
+		
+		<div class="card md-3 mr-3">
+		<div class="card body">
+			
+			
+			<h1 class="text-center mt-5">Update Your Profile</h1>
+				
+                      		
+
+		
+			<div class="container-fluid mt-1">
+				
+				<div class="row">
+					
+					<div class="col-md-10 offset-md-1">
+						
+						<form th:action="@{/user/settings-update}" 
+						th:object="${user}"
+						enctype="multipart/form-data"
+						method="post"
+						
+						>
+						<input type="hidden" th:value="${user.id}" name="cid" />
+						<!--fisrt name-->
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<div class="input-group-text">
+									<i class="fa fa-plus"></i>
+								</div>
+								
+							</div>
+							<input th:value="${user.name}" type="text" id="firstname" name="name" placeholder="Enter name here" class="form-control"/>
+							
+						</div>
+						
+						
+						
+						
+						
+								<!--Email-->
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<div class="input-group-text">
+									@
+								</div>
+								
+							</div>
+							<input th:value="${user.email}" type="email" id="email" name="email" placeholder="Enter email here" class="form-control"/>
+							
+						</div>
+						
+						
+								<!--pass-->
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<div class="input-group-text">
+									<i class="fa fa-briefcase"></i>
+								</div>
+								
+							</div>
+							<input type="password" id="work" name="oldPassword" placeholder="Enter your Old Password here" class="form-control"/>
+							
+							
+						</div>
+								<!--pass-->
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<div class="input-group-text">
+									<i class="fa fa-briefcase"></i>
+								</div>
+								
+							</div>
+							<input type="password" id="work" name="newPassword" placeholder="Enter your New Password here" class="form-control"/>
+							
+							
+						</div>
+						
+								<!--Description-->
+					<div class="form-group mt-3">
+    <textarea th:text="${user.about}" placeholder="Enter about you" name="about" id="about" class="form-control" cols="30" rows="5"></textarea>
+</div>
+
+			<!--	image-->
+	<!--			<div class="custom-file">
+    <input type="file" class="custom-file-input" id="image" name="image">
+    <label class="custom-file-label" for="image">Choose an image</label>
+</div>-->
+				
+				
+				
+				<div class="conatiner text-center mb-3">
+					<button class="btn btn-outline-primary">Update User</button>
+				</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		
+		
+		
+	</section>
+</body>
+</html>
